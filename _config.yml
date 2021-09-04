@@ -41,6 +41,8 @@ minima:
   social_links:
     twitter: tljstewart
     github: tljstewart
+    linkedin: tljstewart
+    medium: tljstewart
 
 # Set this to true to get LaTeX math equation support
 use_math: 

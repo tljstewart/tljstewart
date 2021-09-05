@@ -191,7 +191,13 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Using-Interactive-Charts-Altair">Using Interactive Charts Altair </a></li>
-<li class="toc-entry toc-h1"><a href="#Footnotes">Footnotes </a></li>
+<li class="toc-entry toc-h1">
+<a href="#Footnotes">Footnotes </a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#Site-Generator-Footnotes">Site Generator Footnotes </a></li>
+<li class="toc-entry toc-h2"><a href="#Markdown-Footnotes">Markdown Footnotes </a></li>
+</ul>
+</li>
 </ul>
 <!--
 #################################################
@@ -935,27 +941,56 @@ Solving environment: done
 <h1 id="Footnotes">
 <a class="anchor" href="#Footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Footnotes<a class="anchor-link" href="#Footnotes"> </a>
 </h1>
-</div>
-</div>
-</div>*This <sup id="fnref-20" class="footnote-ref"><a href="#fn-20">20</a></sup>*
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>adds a linked superscript <sup id="fnref-20" class="footnote-ref"><a href="#fn-20">20</a></sup></p>
+<h2 id="Site-Generator-Footnotes">
+<a class="anchor" href="#Site-Generator-Footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Site Generator Footnotes<a class="anchor-link" href="#Site-Generator-Footnotes"> </a>
+</h2>
+<p>This site generator syntax:</p>
 
 </div>
 </div>
-</div>This *<div class="footnotes"><p id="fn-20">20. This is the actual footnote; with a [link to Fastai docs](https://github.com/fastai/fastpages/blob/master/_fastpages_docs/NOTEBOOK_FOOTNOTES.md) as well! and a single quote ' too!<a href="#fnref-20" class="footnote footnotes">↩</a></p></div>* adds the footer below
+</div>
+<pre>
+    <code>
+{\% fn 20 \%}
+    </code>
+</pre>
+<p>
+without the <code>\</code> , adds a linked superscript <sup id="fnref-20" class="footnote-ref"><a href="#fn-20">20</a></sup> where you place it.
+</p>
+<p>
+This site generator syntax: 
+</p>
+<pre>
+    <code>
+\{\{ 'This is the actual footnote; with a [link to Fastai docs](https://github.com/fastai/fastpages/blob/master/_fastpages_docs/NOTEBOOK_FOOTNOTES.md) as well! and a single quote ' too!'  | fndetail: 20 \}\}
+    </code>
+</pre>
+<p>
+without the 4 <code>\</code> adds the footer below.
+</p>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
 <div class="footnotes"><p id="fn-20">20. This is the actual footnote; with a <a href="https://github.com/fastai/fastpages/blob/master/_fastpages_docs/NOTEBOOK_FOOTNOTES.md">link to Fastai docs</a> as well! and a single quote ' too!<a href="#fnref-20" class="footnote footnotes">↩</a></p></div>
-<p>I have more <sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup> to say up here. I have even more [^2] to say up here.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Markdown-Footnotes">
+<a class="anchor" href="#Markdown-Footnotes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Markdown Footnotes<a class="anchor-link" href="#Markdown-Footnotes"> </a>
+</h2>
+<p>Another way to add footnotes, however seemingly less reliable across cells is by using this markdown syntax <code>[^1]</code> at the point of reference, then again in the footer section <code>[^1]: To say down here</code></p>
+<p>I have more <sup class="footnote-ref" id="fnref-1"><a href="#fn-1">1</a></sup> to say up here.</p>
+<p>I have even more <sup class="footnote-ref" id="fnref-2"><a href="#fn-2">2</a></sup> to say up here.</p>
 <div class="footnotes">
 <hr>
 <ol>
-<li id="fn-1"><p>To say down here.<a href="#fnref-1" class="footnote">↩</a></p></li>
+<li id="fn-1"><p>more to say down here.<a href="#fnref-1" class="footnote">↩</a></p></li>
+<li id="fn-2"><p>even more to say down here.<a href="#fnref-2" class="footnote">↩</a></p></li>
 </ol>
 </div>
 
@@ -965,7 +1000,19 @@ Solving environment: done
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Footnotes test in adjcent cell, doesn't work, seems to need it in same cell for this specific footnote formating to work.</p>
+<p>However, these markdown footnotes <code>[^2]</code> footnotes don't seem to work across cells:</p>
+<div class="footnotes">
+<hr>
+<ol></ol>
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As you can see it doesn't show up down here:</p>
 <div class="footnotes">
 <hr>
 <ol></ol>

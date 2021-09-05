@@ -87,7 +87,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -403,6 +403,22 @@ Solving environment: done
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>OpenCV reads images as <strong>BGR</strong>, we after <code>cv2.imread</code> we need to <strong>convert to RGB</strong> for sanity, also if you do this conversion you <strong>must also covert back to BGR for wrtite</strong> <code>cv2.imwrite</code> or it will save as a BGR image</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Lets load the images and convert from BGR to RGB</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -414,20 +430,113 @@ Solving environment: done
 <span class="n">img</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_BGR2RGB</span><span class="p">)</span>
 <span class="n">img_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">img</span><span class="p">]</span>
 <span class="c1">#img_resize = cv2.resize(img,None,fx=0.25,fy=0.25,interpolation=cv2.INTER_AREA)</span>
-<span class="n">img_resize</span> <span class="o">=</span> <span class="n">img</span><span class="p">[</span><span class="mi">1226</span><span class="p">:,</span><span class="mi">500</span><span class="p">:</span><span class="mi">4500</span><span class="p">]</span>
+</pre></div>
 
-<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s2">"data/2021-09-03-My-First-Blog-Post/out/favicon.png"</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img_resize</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGB2BGR</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">img_resize</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since images are just numpy arrays, let crop it by slicing to make it a square image</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">img_resize</span> <span class="o">=</span> <span class="n">img</span><span class="p">[</span><span class="mi">1226</span><span class="p">:,</span><span class="mi">500</span><span class="p">:</span><span class="mi">4500</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can use OpenCV to resize the image, this is different than crop, as instead of cutting out <code>cv2.resize</code> will perform an interpolation in a neighbor of pixels to replace the higher resolution pixels with</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">img_resize</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">img_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">img_resize</span><span class="p">)</span>
 <span class="n">img_resize75</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">img_resize</span><span class="p">,(</span><span class="mi">75</span><span class="p">,</span><span class="mi">75</span><span class="p">),</span><span class="n">interpolation</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LANCZOS4</span><span class="p">)</span>
 <span class="n">img_resize16</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">img_resize</span><span class="p">,(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">),</span><span class="n">interpolation</span><span class="o">=</span><span class="n">cv2</span><span class="o">.</span><span class="n">INTER_LANCZOS4</span><span class="p">)</span>
 <span class="c1"># the 16x16 and 75x75 turned out terrible lol</span>
+</pre></div>
 
+    </div>
+</div>
+</div>
 
-<span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">img_list</span><span class="p">:</span>
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Display the results in a for loop, # the 16x16 and 75x75 turned out terrible lol sooooo lets not display those.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">image</span> <span class="ow">in</span> <span class="n">img_list</span><span class="p">:</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
 
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we can write to disc and save these images, however you must call <code>cv2.cvtColor</code> on the image to</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s2">"data/2021-09-03-My-First-Blog-Post/out/favicon.png"</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img_resize</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGB2BGR</span><span class="p">))</span> <span class="c1">#convert back to RGB image</span>
+<span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s2">"data/2021-09-03-My-First-Blog-Post/out/testbgrrgb.png"</span><span class="p">,</span> <span class="n">img</span><span class="p">)</span> <span class="c1">#no conversion, saves as BGR image</span>
 <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="s2">"data/2021-09-03-My-First-Blog-Post/out/favicon16x16.PNG"</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">cvtColor</span><span class="p">(</span><span class="n">img_resize16</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">COLOR_RGB2BGR</span><span class="p">))</span>
 </pre></div>
 
@@ -553,11 +662,108 @@ Solving environment: done
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'a'</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="s1">'CCCDDDEEE'</span><span class="p">),</span>
                      <span class="s1">'b'</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]})</span>
+
 <span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
-<span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">vega_datasets</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="n">cars</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">cars</span><span class="o">.</span><span class="n">url</span>
+
+<span class="n">chart</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">(</span><span class="n">cars</span><span class="p">)</span><span class="o">.</span><span class="n">mark_point</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">'Horsepower:Q'</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">'Miles_per_Gallon:Q'</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">'Origin:N'</span><span class="p">,</span>
+<span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Assignment operations don't trigger the notebook’s auto display mechanism, we need to call the assigned plot, <code>chart</code></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">chart</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-cc523ecdf27f434c8ea6874328a0cedd"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-cc523ecdf27f434c8ea6874328a0cedd") {
+      outputDiv = document.getElementById("altair-viz-cc523ecdf27f434c8ea6874328a0cedd");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://cdn.jsdelivr.net/npm/vega-datasets@v1.29.0/data/cars.json"}, "mark": "point", "encoding": {"color": {"type": "nominal", "field": "Origin"}, "x": {"type": "quantitative", "field": "Horsepower"}, "y": {"type": "quantitative", "field": "Miles_per_Gallon"}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json"}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
 </div>
 </div>
 

@@ -240,19 +240,21 @@ Python 3.9.4
 <a class="anchor" href="#Adding-Conda-Environment-to-Juypter-Lab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding Conda Environment to Juypter-Lab<a class="anchor-link" href="#Adding-Conda-Environment-to-Juypter-Lab"> </a>
 </h1>
 <p>If you're using a <code>conda</code> virtual environment <em>(like me)</em> and <code>Jupyter</code> didn't pull in that environment when lauched <em>(also, like me)</em> follow these steps.</p>
-<p><strong>From the command line:</strong>
-1 <code>conda activate &lt;name-of-environment&gt;</code>
-2 <code>conda install ipykernel</code>
-3 <code>ipython kernel install --user --name=ml39</code></p>
-
-<pre><code>* You must use the `--user` option, or it will install the kernel in the system path which is not the default for finding kernels, here I named my kernel **ml39**, the same as the name of my conda environment
-</code></pre>
-<p>4 <code>jupyter-lab</code></p>
-
-<pre><code>* Start jupyter-lab
-
-
-</code></pre>
+<p><strong>From the command line:</strong></p>
+<ol>
+<li><code>conda activate &lt;name-of-environment&gt;</code></li>
+<li><code>conda install ipykernel</code></li>
+<li>
+<code>ipython kernel install --user --name=ml39</code> <ul>
+<li>You must use the <code>--user</code> option, or it will install the kernel in the system path which is not the default for finding kernels, here I named my kernel <strong>ml39</strong>, the same as the name of my conda environment</li>
+</ul>
+</li>
+<li>
+<code>jupyter-lab</code><ul>
+<li>Start jupyter-lab</li>
+</ul>
+</li>
+</ol>
 <p>Now your conda environment should be accessiable in juypter-lab and selectable as the kernel to use.</p>
 
 </div>

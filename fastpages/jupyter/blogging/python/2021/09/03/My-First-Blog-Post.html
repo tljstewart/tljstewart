@@ -172,7 +172,12 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2">
 <a href="#Working-With-Latex">Working With Latex </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Perceptron-Algorithm">Perceptron Algorithm </a></li>
+<li class="toc-entry toc-h3">
+<a href="#Perceptron-Algorithm">Perceptron Algorithm </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Updating-weights">Updating weights </a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Working-With-Emojis">Working With Emojis </a></li>
@@ -385,6 +390,7 @@ $h(x) = sign((\sum^{d}_{i=1}w_{i}x_{i}) + b)$
 <br>
 <br>
 $h(x) = sign(w^{T}x)$</p>
+<p></p>
 <ul>
     <li>h(x) represents the classification term, usually 1 or 0 depending on the sign</li>
     <li>sign corresponds to ∓</li>
@@ -396,10 +402,18 @@ $h(x) = sign(w^{T}x)$</p>
 Convention is to treat b as another weight $w_{o}$, and include it in the weight vector.
 <br>
 
-#### Updating weights
-If this was ran just once with initial weights there would be lots of incorrectly classified points, unless the initial weights were reandomly correct. Because of this we need to iterate over the weights and continuously update them untit there is no misclassification or the max iterations is reached. This is done by the formula below.
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Updating-weights">
+<a class="anchor" href="#Updating-weights" aria-hidden="true"><span class="octicon octicon-link"></span></a>Updating weights<a class="anchor-link" href="#Updating-weights"> </a>
+</h4>
+<p>If this was ran just once with initial weights there would be lots of incorrectly classified points, unless the initial weights were reandomly correct. Because of this we need to iterate over the weights and continuously update them untit there is no misclassification or the max iterations is reached. This is done by the formula below.
 <br>
-$w(t+1) = w(t) + \eta y_{d}(t) x(t)$
+$w(t+1) = w(t) + \eta y_{d}(t) x(t)$</p>
 <ul>
     <li>$w(t+1)$ is the updated weights</li>
     <li>$w(t)$ is the previous weights</li>

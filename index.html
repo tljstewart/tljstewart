@@ -4,13 +4,42 @@ search_exclude: true
 image: images/logo.png
 ---
 
-[Linkedin](https://linkedin.com/in/tljstewart), [Email](mailto:me@tljstewart.com),
-[GitHib](https://github.com/tljstewart), [Medium](https://medium.com/@tljstewart), [YouTube](https://www.youtube.com/channel/UCarnnSTYTHTh0Z-wvER1Sew)
+<!-- TODO: make the font awesomes look like a button and not a hyperlink
+<div class="social-links">
+<ul class="icons">
+<li><a rel="me" href="mailto:me@tljstewart.com" title=Email><i class="fas fa-paper-plane"></i></a></li>
+<a href="https://github.com/tljstewart"><i class="fab fa-github-square"></i></a>
+<a href="https://www.youtube.com/channel/UCarnnSTYTHTh0Z-wvER1Sew"><i class="fab fa-youtube"></i></a>
+<a href="https://linkedin.com/in/tljstewart"><i class="fab fa-linkedin"></i></a>
+<li><a href="https://twitter.com/tljstewart"><svg class="fab fa-twitter-square"></svg></a></li>
+<li><a href="https://medium.com/@tljstewart" class="icon solid fab fa-medium-m"><span
+class="label">Medium</span></a></li>
+<a href="{{ "assets/files/timothy-stewart-cv-long-Sept2021v7.pdf" | relative_url }}" class="list-group-item"><i class="fas fa-file-download"></i></a>
+</ul>
+</div>
 
+<li>
+      <a href="https://twitter.com/fontawesome">
+        <svg>
+          <use xlink:href="{{ "assets/icons/github-square-brands.svg" | relative_url }}" ></use>
+        </svg>
+      </a>
+    </li>
+    -->
+<!--
+<ul class="icons">
+<li><a href="files/KevinFrancisResume.pdf" target="_blank" class="icon solid fa-file-download"><span class="label">github</span></a></li>
+<li><a href="https://www.linkedin.com/in/kevinfrancis14/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+<li><a href="https://github.com/kevinfrancis1" class="icon brands fa-github"><span class="label">github</span></a></li>
+</ul>
+-->
 
 <center>
   <figure>
-    <img src="{{ site.url }}{{ site.baseurl }}/images/landing.png" alt="Timothy L.J. Stewart">
+    <!-- another way to load site files <img src="{{ site.url }}{{ site.baseurl }}/images/landing.png" alt="Timothy L.J.
+    Stewart">-->
+     <!-- perfered way is to use relative_url -->
+     <img src="{{ "images/landing.png" | relative_url }}" alt="Timothy L.J. Stewart">
     <!-- Or grab the image directly from raw GitHub
     <img src="https://raw.githubusercontent.com/tljstewart/tljstewart/master/images/landing.png"
     width="525" height="861"> -->

@@ -83,12 +83,42 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p><a href="https://linkedin.com/in/tljstewart">Linkedin</a>, <a href="mailto:me@tljstewart.com">Email</a>,
-<a href="https://github.com/tljstewart">GitHib</a>, <a href="https://medium.com/@tljstewart">Medium</a>, <a href="https://www.youtube.com/channel/UCarnnSTYTHTh0Z-wvER1Sew">YouTube</a></p>
+        <div class="home"><!-- TODO: make the font awesomes look like a button and not a hyperlink
+<div class="social-links">
+<ul class="icons">
+<li><a rel="me" href="mailto:me@tljstewart.com" title=Email><i class="fas fa-paper-plane"></i></a></li>
+<a href="https://github.com/tljstewart"><i class="fab fa-github-square"></i></a>
+<a href="https://www.youtube.com/channel/UCarnnSTYTHTh0Z-wvER1Sew"><i class="fab fa-youtube"></i></a>
+<a href="https://linkedin.com/in/tljstewart"><i class="fab fa-linkedin"></i></a>
+<li><a href="https://twitter.com/tljstewart"><svg class="fab fa-twitter-square"></svg></a></li>
+<li><a href="https://medium.com/@tljstewart" class="icon solid fab fa-medium-m"><span
+class="label">Medium</span></a></li>
+<a href="/tljstewart/assets/files/timothy-stewart-cv-long-Sept2021v7.pdf" class="list-group-item"><i class="fas fa-file-download"></i></a>
+</ul>
+</div>
+
+<li>
+      <a href="https://twitter.com/fontawesome">
+        <svg>
+          <use xlink:href="/tljstewart/assets/icons/github-square-brands.svg" ></use>
+        </svg>
+      </a>
+    </li>
+    -->
+<!--
+<ul class="icons">
+<li><a href="files/KevinFrancisResume.pdf" target="_blank" class="icon solid fa-file-download"><span class="label">github</span></a></li>
+<li><a href="https://www.linkedin.com/in/kevinfrancis14/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+<li><a href="https://github.com/kevinfrancis1" class="icon brands fa-github"><span class="label">github</span></a></li>
+</ul>
+-->
 
 <center>
   <figure>
-    <img src="https://tljstewart.github.io/tljstewart/images/landing.png" alt="Timothy L.J. Stewart" />
+    <!-- another way to load site files <img src="https://tljstewart.github.io/tljstewart/images/landing.png" alt="Timothy L.J.
+    Stewart">-->
+     <!-- perfered way is to use relative_url -->
+     <img src="/tljstewart/images/landing.png" alt="Timothy L.J. Stewart" />
     <!-- Or grab the image directly from raw GitHub
     <img src="https://raw.githubusercontent.com/tljstewart/tljstewart/master/images/landing.png"
     width="525" height="861"> -->
@@ -139,6 +169,28 @@ You can edit the `index.html` file to change this content.
         <img class="image-preview " src="/tljstewart/images/coding.jpeg" />
       </div><div class="col-8 d-table-cell p-3">
         <h3>
+          <a class="post-link" href="/tljstewart/fastpages/jupyter/blogging/python/2021/09/05/template-2021-09-03-My-First-Blog-Post.html">
+            A Good Start
+          </a>
+        </h3>
+        <p class="post-meta-description">Good sanity checks and usability with an easy to use blogging platform with extra features for <a href="https://jupyter.org/">Jupyter Notebooks</a>.</p>
+          <p class="post-meta">Sep 5, 2021</p>
+      </div>
+  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-4 d-table-cell p-3 v-align-middle">
+        <img class="image-preview " src="/tljstewart/images/coding.jpeg" />
+      </div><div class="col-8 d-table-cell p-3">
+        <h3>
+          <a class="post-link" href="/tljstewart/python/numpy/api/census%20data/2021/09/05/off-2021-09-05-Census.html">
+            Synthetic Population modeled with Census Data
+          </a>
+        </h3>
+        <p class="post-meta-description">Usuing cenus api data to model human population</p>
+          <p class="post-meta">Sep 5, 2021</p>
+      </div>
+  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-4 d-table-cell p-3 v-align-middle">
+        <img class="image-preview " src="/tljstewart/images/coding.jpeg" />
+      </div><div class="col-8 d-table-cell p-3">
+        <h3>
           <a class="post-link" href="/tljstewart/fastpages/jupyter/blogging/python/2021/09/03/My-First-Blog-Post.html">
             A Good Start
           </a>
@@ -169,6 +221,7 @@ You can edit the `index.html` file to change this content.
   </div></li></ul>
 
     </div>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/tljstewart/"></data>

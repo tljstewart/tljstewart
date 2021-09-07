@@ -1,15 +1,15 @@
 ---
 layout: default
 ---
+<div> <!--class="d-flex flex-justify-center">-->
+    {% include mysocial.html %}
+<div>
+
 
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
-
-    <div class="d-flex flex-justify-center">
-          {% include custom-social.html %}
-    <div>
 
   {{ content | markdownify }}
 

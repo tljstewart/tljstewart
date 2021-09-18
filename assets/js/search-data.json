@@ -74,6 +74,17 @@
 
   
       ,"page5": {
+          "title": "Outreach",
+          "content": "I opertate a community outreach brand called Elevate. . The Elevate mission is to cultivate a culture of compassion and creativity for communities to connect and thrive. . We seek to inspire personal growth and local development through organized events and public speaking on STEM, Art, Athletics and Entrepreneurship. . We sponsor and mentor youth programs, especially for children in the Foster Care System, raising funds annually for scholarships. . The Dianna Japenga Foster Love Scholarship is awarded to foster kids that show an aptitude and desire for creativity, compassion and motivation to pursue higher education in a STEAM field to Elevate their community. . Connect and Support the cause at Elevate .",
+          "url": "https://tljstewart.github.io/outreach/",
+          "relUrl": "/outreach/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page6": {
           "title": "Research",
           "content": "My name is Timothy Stewart, I am currently a Research Engineer at Signature Research Inc. as well as a PhD candidate in Artificial Intelligence at the Institute for Human Machine Cognition - University of West Florida joint program located in Pensacola, Florida. In my freetime I enjoy drone videography and photography, creating content for The Blog and YouTube and keeping it balanced by running it all off on the sandy white beaches where I live. .",
           "url": "https://tljstewart.github.io/research/",
@@ -103,7 +114,7 @@
   
 
   
-      ,"page13": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://tljstewart.github.io/robots.txt",

@@ -13,3 +13,6 @@ _notebooks/.ipynb_checkpoints
 .tweet-cache
 __pycache__
 .DS_store
+_posts
+settings.ini
+*.code-workspace

@@ -10,7 +10,7 @@ title: Timothy L.J. Stewart
 description: The Blog.
 github_username: tljstewart
 # you can comment the below line out if your repo name is not different than your baseurl
-#github_repo: "tljstewart"
+github_repo: "tljstewart"
 
 # OPTIONAL: override baseurl and url if using a custom domain
 # Note: leave out the trailing / from this value. 
@@ -119,7 +119,7 @@ kramdown:
 
 # to limit size of xml as it can grow quite large.
 feed:
-  posts_limit: 5 #default posts_limit: 10
+  posts_limit: 100 #default posts_limit: 10
   excerpt_only: true
   
 exclude:

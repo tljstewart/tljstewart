@@ -484,4 +484,8 @@ pre code { font-size: 15px !important; }
 
 p code { font-size: 19px; }
 
+#round-img { width: 190px; height: 190px; border: 2px solid #fff; -moz-box-shadow: 0px 6px 5px #ccc; -webkit-box-shadow: 0px 6px 5px #ccc; box-shadow: 0px 6px 5px #ccc; -moz-border-radius: 190px; -webkit-border-radius: 190px; border-radius: 190px; }
+
+.social-div img { border: 2px solid #fff; -moz-box-shadow: 0px 6px 5px #ccc; -webkit-box-shadow: 0px 6px 5px #ccc; box-shadow: 0px 6px 5px #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+
 /*# sourceMappingURL=style.css.map */

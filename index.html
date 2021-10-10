@@ -83,24 +83,25 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="d-flex flex-justify-center">
+        <style>
+#round-img {
+  width: 190px;
+  height: 190px;
+  border:2px solid #fff;
+  background: url(img/duck.png) no-repeat;
+  -moz-box-shadow: 0px 6px 5px #ccc;
+  -webkit-box-shadow: 0px 6px 5px #ccc;
+  box-shadow: 0px 6px 5px #ccc;
+  -moz-border-radius:190px;
+  -webkit-border-radius:190px;
+  border-radius:190px;
+}
+</style>
+
+<div class="d-flex flex-justify-center">
 
 <center>
-  <figure>
-    <!-- another way to load site files <img src="https://tljstewart.ai/images/landing.png" alt="Timothy L.J.
-    Stewart">-->
-     <!-- perfered way is to use relative_url -->
-     <img src="/images/landing.png" alt="Timothy L.J. Stewart">
-    <!-- Or grab the image directly from raw GitHub
-    <img src="https://raw.githubusercontent.com/tljstewart/tljstewart/master/images/landing.png"
-    width="525" height="861"> -->
-   <!-- <figcaption>Figure: <a href="https://www.linkedin.com">"Few are those who see with their own eyes,
-    and feel with their own hearts." - Albert Einstein</a></figcaption>-->
-	<figcaption><a href="https://linkedin.com/in/tljstewart">Few are those who see with
-	their own eyes, and feel with their own hearts. - Albert Einstein</a></figcaption>
-  </figure>
-</center>
-    <div> <!--class="d-flex align-around flex-justify-center">-->
+  <div> <!--class="d-flex align-around flex-justify-center">-->
     <a href="https://github.com/tljstewart" target="_blank" title="Github">
 	 <img src="/assets/icons/github-square-brands.svg" width="32" height="32" alt="Github">
     </a>
@@ -142,6 +143,21 @@ window.onload = wrap_img;
 
 </div>
 
+  <figure>
+    <!-- another way to load site files <img src="https://tljstewart.ai/images/landing.png" alt="Timothy L.J.
+    Stewart">-->
+     <!-- perfered way is to use relative_url -->
+     <img  id="round-img" src="/images/landing-sq2.png" alt="Timothy L.J. Stewart">
+    <!-- Or grab the image directly from raw GitHub
+    <img src="https://raw.githubusercontent.com/tljstewart/tljstewart/master/images/landing.png"
+    width="525" height="861"> -->
+   <!-- <figcaption>Figure: <a href="https://www.linkedin.com">"Few are those who see with their own eyes,
+    and feel with their own hearts." - Albert Einstein</a></figcaption>-->
+	<figcaption><a href="https://linkedin.com/in/tljstewart">Few are those who see with
+	their own eyes,<br> and feel with their own hearts. - Albert Einstein</a></figcaption>
+  </figure>
+</center>
+    
 </div>
 <!--yet another way to load an image, but not height or width params !["Few are those who see with their own eyes,
     and feel with their own hearts." - Albert Einstein](/images/landing.png
@@ -210,9 +226,10 @@ You can edit the `index.html` file to change this content.
 
    <!-- Assemble final sorted posts array -->
   
-  <ul class="post-list"><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-4 d-table-cell p-3 v-align-middle">
+  <ul class="post-list"><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
+    <!--<div class="col-4 d-table-cell p-3 v-align-middle">-->
         <img class="image-preview " src="/images/graph-network.jpeg" />
-      </div><div class="col-8 d-table-cell p-3">
+     <!--- </div>--><!--<div class="col-8 d-table-cell p-3">-->
         <h3>
           <a class="post-link" href="/2021/10/04/usa-synthetic-population-part-1">
             Synthetic Population Generation of United States for Reinforcement Learning Policy Simulation
@@ -221,9 +238,10 @@ You can edit the `index.html` file to change this content.
         <p class="post-meta-description"><b>Abstract:</b> There are many uses for synthetic populations. Modern applications utilize high performance computing in stochastic simulations to research areas, such as, disease spread, information spread, economics, social modeling, disaster response, catastrophic events, collective behaviors, public policies, graph neural networks, computational social science and many more. In this paper I develop a python software package to generate a synthetic population from public datasets.</p>
           <p class="post-meta">Oct 4, 2021</p>
       </div>
-  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-4 d-table-cell p-3 v-align-middle">
+  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
+    <!--<div class="col-4 d-table-cell p-3 v-align-middle">-->
         <img class="image-preview " src="/images/coding.jpeg" />
-      </div><div class="col-8 d-table-cell p-3">
+     <!--- </div>--><!--<div class="col-8 d-table-cell p-3">-->
         <h3>
           <a class="post-link" href="/2021/09/03/A-Good-Start-part-1">
             A Good Start
@@ -232,9 +250,10 @@ You can edit the `index.html` file to change this content.
         <p class="post-meta-description">Good sanity checks and usability with an easy to use blogging platform with extra features for <a href="https://jupyter.org/">Jupyter Notebooks</a>.</p>
           <p class="post-meta">Sep 3, 2021</p>
       </div>
-  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-4 d-table-cell p-3 v-align-middle">
+  </div></li><li><div class="Box box-shadow-medium rounded-1 col-12"><div class="col-8 d-table-cell p-3">
+    <!--<div class="col-4 d-table-cell p-3 v-align-middle">-->
         <img class="image-preview " src="/images/chart-preview.png" />
-      </div><div class="col-8 d-table-cell p-3">
+     <!--- </div>--><!--<div class="col-8 d-table-cell p-3">-->
         <h3>
           <a class="post-link" href="/2020/02/20/test">
             How to Use Fastpages

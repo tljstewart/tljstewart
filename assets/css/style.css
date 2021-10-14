@@ -488,4 +488,6 @@ p code { font-size: 19px; }
 
 .social-div img { border: 2px solid #fff; -moz-box-shadow: 0px 6px 5px #ccc; -webkit-box-shadow: 0px 6px 5px #ccc; box-shadow: 0px 6px 5px #ccc; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
 
+.social-a a:hover { color: white; }
+
 /*# sourceMappingURL=style.css.map */

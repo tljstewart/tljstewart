@@ -4,6 +4,7 @@ title: Shader Editor Draft
 permalink: /shader-editor/
 ---
 
+:construction: Please don't mind the progress here, I'm working on something cool :construction: 
 <link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css">
 <script type="application/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>
 

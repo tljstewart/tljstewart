@@ -4,6 +4,8 @@ title: 3D Editor Draft
 permalink: /3d-editor/
 ---
 
+:construction: Please don't mind the progress here, I'm working on something cool :construction:
+
 <html>
 	<head>
 		<meta charset="utf-8">

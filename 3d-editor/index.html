@@ -4,17 +4,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>About Me | Timothy L.J. Stewart</title>
+<title>3D Editor Draft | Timothy L.J. Stewart</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="About Me" />
+<meta property="og:title" content="3D Editor Draft" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Blog." />
 <meta property="og:description" content="The Blog." />
-<link rel="canonical" href="https://tljstewart.ai/about/" />
-<meta property="og:url" content="https://tljstewart.ai/about/" />
+<link rel="canonical" href="https://tljstewart.ai/3d-editor/" />
+<meta property="og:url" content="https://tljstewart.ai/3d-editor/" />
 <meta property="og:site_name" content="Timothy L.J. Stewart" />
 <script type="application/ld+json">
-{"url":"https://tljstewart.ai/about/","@type":"WebSite","headline":"About Me","name":"Timothy L.J. Stewart","description":"The Blog.","@context":"https://schema.org"}</script>
+{"url":"https://tljstewart.ai/3d-editor/","@type":"WebPage","headline":"3D Editor Draft","description":"The Blog.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tljstewart.ai/feed.xml" title="Timothy L.J. Stewart" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -100,16 +100,48 @@ window.onload = wrap_img;
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About Me</h1>
+    <h1 class="post-title">3D Editor Draft</h1>
   </header>
 
   <div class="post-content">
-    <p>My name is Timothy Stewart, I am currently a Research Engineer at Signature Research Inc. as well as
-a PhD candidate in Artificial Intelligence at the Institute for Human Machine Cognition - University of
-West Florida joint program located in Pensacola, Florida. In my freetime I enjoy drone videography
-and photography, creating content for The Blog and YouTube and keeping it balanced by running it all
-off on the sandy white beaches where I live.</p>
+    <html>
+	<head>
+		<meta charset="utf-8" />
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+		</style>
+	</head>
+	<body>
+		<script src="/assets/js/three.min.js"></script>
+		<script>
+			const scene = new THREE.Scene();
+			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
+			const renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+
+			const geometry = new THREE.BoxGeometry();
+			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			const cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			function animate() {
+				requestAnimationFrame( animate );
+
+				cube.rotation.x += 0.01;
+				cube.rotation.y += 0.01;
+
+				renderer.render( scene, camera );
+			};
+
+			animate();
+		</script>
+	</body>
+</html>
 
   </div>
 

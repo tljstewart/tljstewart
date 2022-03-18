@@ -4,17 +4,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>About Me | Timothy L.J. Stewart</title>
+<title>Shader Editor Draft | Timothy L.J. Stewart</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="About Me" />
+<meta property="og:title" content="Shader Editor Draft" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The Blog." />
 <meta property="og:description" content="The Blog." />
-<link rel="canonical" href="https://tljstewart.ai/about/" />
-<meta property="og:url" content="https://tljstewart.ai/about/" />
+<link rel="canonical" href="https://tljstewart.ai/shader-editor/" />
+<meta property="og:url" content="https://tljstewart.ai/shader-editor/" />
 <meta property="og:site_name" content="Timothy L.J. Stewart" />
 <script type="application/ld+json">
-{"url":"https://tljstewart.ai/about/","@type":"WebSite","headline":"About Me","name":"Timothy L.J. Stewart","description":"The Blog.","@context":"https://schema.org"}</script>
+{"url":"https://tljstewart.ai/shader-editor/","@type":"WebPage","headline":"Shader Editor Draft","description":"The Blog.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://tljstewart.ai/feed.xml" title="Timothy L.J. Stewart" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -100,15 +100,28 @@ window.onload = wrap_img;
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">About Me</h1>
+    <h1 class="post-title">Shader Editor Draft</h1>
   </header>
 
   <div class="post-content">
-    <p>My name is Timothy Stewart, I am currently a Research Engineer at Signature Research Inc. as well as
-a PhD candidate in Artificial Intelligence at the Institute for Human Machine Cognition - University of
-West Florida joint program located in Pensacola, Florida. In my freetime I enjoy drone videography
-and photography, creating content for The Blog and YouTube and keeping it balanced by running it all
-off on the sandy white beaches where I live.</p>
+    <link type="text/css" rel="stylesheet" href="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.css" />
+
+<script type="application/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslEditor/gh-pages/build/glslEditor.js"></script>
+
+<body>
+    <div id="glsl_editor"></div>
+</body>
+<script type="text/javascript">
+    const glslEditor = new GlslEditor('#glsl_editor', { 
+        canvas_size: 500,
+        canvas_draggable: true,
+        theme: 'monokai',
+        multipleBuffers: true,
+        watchHash: true,
+        fileDrops: true,
+        menu: true
+    });
+</script>
 
 
   </div>

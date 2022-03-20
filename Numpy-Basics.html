@@ -161,6 +161,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Inner-Product">Inner Product </a></li>
 <li class="toc-entry toc-h2"><a href="#Wrong-Dimensions">Wrong Dimensions </a></li>
 </ul><!--
 #################################################
@@ -188,11 +189,6 @@ window.onload = wrap_img;
 <span class="c1"># a*b does a hadamard product</span>
 <span class="c1"># dot(av,bv) of vectors does a hadamard product</span>
 <span class="c1"># dot(am,bm) of matrix does matrix multiplication</span>
-
-<span class="c1"># inner product = dot product (1*2)+(1*2)+(1*2)=6</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#this is not a column or row vector</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> <span class="c1">#this is not a column or row vector</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">(1)</span><span class="se">\n</span><span class="s2">a and b shape: </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> --&gt;  dot(a,b) = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -219,6 +215,34 @@ a and b shape: (3,) --&gt;  dot(a,b) =
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Inner-Product">
+<a class="anchor" href="#Inner-Product" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inner Product<a class="anchor-link" href="#Inner-Product"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#this is not a column or row vector</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span> <span class="c1">#this is not a column or row vector</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">(1)</span><span class="se">\n</span><span class="s2">a and b shape: </span><span class="si">{</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> --&gt;  dot(a,b) = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -229,7 +253,7 @@ a and b shape: (3,) --&gt;  dot(a,b) =
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ac</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">1</span><span class="p">]])</span> 
-<span class="n">bc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">3</span><span class="p">],</span>
+<span class="n">bc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">2</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">2</span><span class="p">]])</span> 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">(2)</span><span class="se">\n</span><span class="s2">ar and bc shape: </span><span class="si">{</span><span class="n">ac</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">bc</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> --&gt;  </span><span class="se">\n</span><span class="s2">dot(ac.T,bc) = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ac</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">bc</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">dot(bc.T,ac) = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">bc</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">ac</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -249,9 +273,9 @@ a and b shape: (3,) --&gt;  dot(a,b) =
 (2)
 ar and bc shape: (3, 1) (3, 1) --&gt;  
 dot(ac.T,bc) = 
-[[7]] 
+[[6]] 
 dot(bc.T,ac) = 
-[[7]]
+[[6]]
 </pre>
 </div>
 </div>
@@ -275,7 +299,7 @@ dot(bc.T,ac) =
 <span class="c1"># and [[0,0]] is a 1x2 row vector</span>
 
 <span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span> <span class="p">]])</span> 
-<span class="n">bc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">3</span><span class="p">],</span>
+<span class="n">bc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">2</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">2</span><span class="p">]])</span> 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="se">\n</span><span class="s2">(3)</span><span class="se">\n</span><span class="s2">ar and bc shape: </span><span class="si">{</span><span class="n">ar</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">bc</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> --&gt;  </span><span class="se">\n</span><span class="s2">dot(ar,bc) = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">ar</span><span class="p">,</span><span class="n">bc</span><span class="p">)</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">dot(bc,ar) = </span><span class="se">\n</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">bc</span><span class="p">,</span><span class="n">ar</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -295,9 +319,9 @@ dot(bc.T,ac) =
 (3)
 ar and bc shape: (1, 3) (3, 1) --&gt;  
 dot(ar,bc) = 
-[[7]] 
+[[6]] 
 dot(bc,ar) = 
-[[3 3 3]
+[[2 2 2]
  [2 2 2]
  [2 2 2]]
 </pre>

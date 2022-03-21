@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://tljstewart.ai/baller-change-machine</loc>
+<lastmod>2018-05-01T00:00:00-05:00</lastmod>
+</url>
+<url>
 <loc>https://tljstewart.ai/markdown/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
@@ -52,14 +56,14 @@
 </url>
 <url>
 <loc>https://tljstewart.ai/assets/files/Intelligent_Computer_Vision_Tracking_and_Embedded-IPC3581.pdf</loc>
-<lastmod>2022-03-20T18:53:20-05:00</lastmod>
+<lastmod>2022-03-20T19:01:07-05:00</lastmod>
 </url>
 <url>
 <loc>https://tljstewart.ai/assets/files/Model-Free_Reinforcement_Learning_for_Static_Point_Source_Localization_in_a_3D_Simulation.pdf</loc>
-<lastmod>2022-03-20T18:53:20-05:00</lastmod>
+<lastmod>2022-03-20T19:01:07-05:00</lastmod>
 </url>
 <url>
 <loc>https://tljstewart.ai/assets/files/timothy-stewart-cv-long-Sept2021v12.pdf</loc>
-<lastmod>2022-03-20T18:53:20-05:00</lastmod>
+<lastmod>2022-03-20T19:01:07-05:00</lastmod>
 </url>
 </urlset>

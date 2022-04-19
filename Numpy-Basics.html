@@ -396,10 +396,10 @@ dot(bc,ar) =
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wrong Dimensions</span>
-<span class="n">am</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span> <span class="c1">#this is not a column or row vector</span>
+<span class="n">am</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span> 
 <span class="n">bm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">2</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
-                <span class="p">[</span><span class="mi">2</span><span class="p">]])</span> <span class="c1">#this is not a column or row vector</span>
+                <span class="p">[</span><span class="mi">2</span><span class="p">]])</span> 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ar and bc shape: </span><span class="si">{</span><span class="n">am</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">bm</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> --&gt;  dot(a,b) = </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">am</span><span class="p">,</span><span class="n">bm</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 

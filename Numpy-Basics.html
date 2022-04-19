@@ -250,7 +250,11 @@ a and b shape: (3,) --&gt;  dot(a,b) =
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ac</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># where [[0],  is a 2x1 column vector</span>
+<span class="c1">#        [0]]</span>
+<span class="c1"># and [[0,0]] is a 1x2 row vector</span>
+
+<span class="n">ac</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">1</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">1</span><span class="p">]])</span> 
 <span class="n">bc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">2</span><span class="p">],</span>
@@ -293,12 +297,7 @@ dot(bc.T,ac) =
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># One way to force a row or column vector is to use double bracket [[]]</span>
-<span class="c1"># where [[0],  is a 2x1 column vector</span>
-<span class="c1">#        [0]]</span>
-<span class="c1"># and [[0,0]] is a 1x2 row vector</span>
-
-<span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span> <span class="p">]])</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ar</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span> <span class="p">]])</span> 
 <span class="n">bc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span> <span class="p">[[</span><span class="mi">2</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
                 <span class="p">[</span><span class="mi">2</span><span class="p">]])</span> 
